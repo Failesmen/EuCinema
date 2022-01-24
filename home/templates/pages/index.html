@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | EuCinema</title>
-  <link rel="icon" type="image/png" sizes="16x16"  href="{% static 'img/favicon/favicon-16x16.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
 
   <link rel="stylesheet" href="{% static 'css/animate.css' %}">
   <link rel="stylesheet" href="{% static 'css/tiny-slider.css' %}">
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/default.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  
+
 </head>
 
 <body>
@@ -53,9 +53,11 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              {% block nav %}
               <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a class="nav-link active" data-scroll-nav="0" aria-current="page" href="#">Home</a>
+                <li class="nav-item"> {% block nav-home %}
+                  <a class="nav-link active" data-scroll-nav="0" aria-current="page" href="{% url 'index' %}">Home</a>
+                  {% endblock %}
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" data-scroll-nav="1" href="#">Vantages</a>
@@ -63,10 +65,12 @@
                 <li class="nav-item">
                   <a class="nav-link" data-scroll-nav="2" href="#">Sobre</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-scroll-nav="3" href="contato.html">Contato</a>
+                <li class="nav-item"> {% block nav-contato %}
+                  <a class="nav-link" data-scroll-nav="3" href="{% url 'contato' %}">Contato</a>
+                  {% endblock %}
                 </li>
               </ul>
+              {% endblock %}
 
             </div>
           </div>
@@ -86,7 +90,7 @@
           <div class="col-lg-6 col-md-10">
             <div class="header-hero-content">
               <h1 class="header-title wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.2s"><span>Encontre
-            Seu Filme</span> Com Facilidade e Rapidez</h1>
+                  Seu Filme</span> Com Facilidade e Rapidez</h1>
               <p class="text wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.4s">Lorem ipsum dolor sit amet
                 consectetur adipisicing elit. Aspernatur fugiat qui tenetur sit vero delectus vitae suscipit nostrum
                 aliquam exercitationem necessitatibus veniam placeat, voluptatibus harum.</p>
@@ -122,8 +126,8 @@
         <div class="col-xl-6 col-lg-7">
           <div class="section-title text-center mb-30">
             <h1 class="mb-25  wow fadeInUp" data-wow-delay=".2s"><span>Vantagens</span> Incríveis<h1>
-            <p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Veritatis error enim perspiciatis iste dignissimos tempore?</p>
+                <p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veritatis error enim perspiciatis iste dignissimos tempore?</p>
           </div>
         </div>
       </div>

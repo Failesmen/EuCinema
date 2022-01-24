@@ -1,3 +1,6 @@
+
+{%include 'navbar.html'%}
+
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -6,14 +9,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato | EuCinema</title>
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="assets/css/tiny-slider.css">
-  <link rel="stylesheet" href="assets/css/all.css">
-  <link rel="stylesheet" href="assets/css/venobox.css" type="text/css" media="screen" />
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/default.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <link rel="stylesheet" href="{% static 'css/tiny-slider.css' %}">
+  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+  <link rel="stylesheet" href="{% static 'css/venobox.css' %}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/default.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <style>
   body {
@@ -21,7 +24,6 @@
 
   }
 </style>
-
 
 <body>
   <div class="preloader">
@@ -47,7 +49,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
-              <img class="image" src="assets/img/header/logo/eucinema-logo.png" alt="">
+              <img class="image" src="{% static 'img/header/logo/eucinema-logo.png' %}" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -79,22 +81,21 @@
   </div>
 
   <!-- ---- jquery Js ---- -->
-  <script src="assets/js/jquery-1.12.4.min.js"></script>
+  <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
   <!-- -------- venobox js ------ -->
-  <script type="text/javascript" src="assets/js/venobox.min.js"></script>
+  <script type="text/javascript" src="{% static 'js/venobox.min.js' %}"></script>
   <!-- ---------- wow js ---------- -->
-  <script src="assets/js/wow.min.js"></script>
+  <script src="{% static 'js/wow.min.js' %}"></script>
   <!-- ---------- tiny slider js --------- -->
-  <script src="assets/js/tiny-slider.js"></script>
+  <script src="{% static 'js/tiny-slider.js' %}"></script>
   <!-- ---------- scrollit js ---------- -->
-  <script src="assets/js/scrollIt.min.js"></script>
+  <script src="{% static 'js/scrollIt.min.js' %}"></script>
   <!-- -------- font awsome js --------- -->
-  <script src="assets/js/all.js"></script>
+  <script src="{% static 'js/all.js' %}"></script>
   <!-- ---- Bootstrap Js ---- -->
-  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
   <!-- ---- main js --- -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>
