@@ -15,11 +15,11 @@ def contato(request):
       nome=request.POST.get('name')
       sobrenome=request.POST.get('sobrenome')
       email=request.POST.get('email')
-      message=request.POST.get('message')
+      subject=request.POST.get('subject')
       contato.nome=nome
       contato.sobrenome=sobrenome
       contato.email=email
-      contato.message=message
+      contato.subject=subject
       contato.save()
       return HttpResponse("<h1>Obrigado por entrar em contato</h1>")
    return render(request, "pages/contato.html")    
